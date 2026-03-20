@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+.recipe {
+	background: $color-white;
+	max-width: 46rem;
+
+	@include breakpointMobile(600px) {
+		padding: 2.5rem;
+		border-radius: 1.5rem;
+
+		img {
+			border-radius: 0.75rem;
+		}
+	}
+
+	&__intro {
+		padding: 0 2rem;
+		margin: 2.5rem 0 2rem;
+
+		@include breakpointMobile(600px) {
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 2.25rem;
+			margin-bottom: 1.5rem;
+		}
+		p {
+			line-height: 1.5;
+			color: $color-stone-600;
+		}
+	}
+
+	&__prepTime {
+		padding: 1.5rem 3.5rem;
+		margin: 2rem 0;
+
+		h2 {
+			font-family: 'Outfit', sans-serif;
+			font-size: 1.25rem;
+			font-weight: 600;
+			color: $color-rose-800;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			color: $color-stone-600;
+			list-style: inside;
+
+			li {
+				position: relative;
+				padding-left: 0.5rem;
+
+				&::marker {
+					color: $color-rose-800;
+					margin-right: 5rem;
+				}
+
+				strong {
+					padding-left: 1rem;
+				}
+			}
+		}
+	}
+
+	&__ingredients {
+		margin: 2rem 0;
+		padding: 0 2rem;
+
+		@include breakpointMobile(600px) {
+			padding: 0;
+		}
+	}
+
+	&__instructions {
+		margin: 2rem 0;
+		padding: 0 2rem;
+
+		@include breakpointMobile(600px) {
+			padding: 0;
+		}
+	}
+
+	&__nutrition {
+		margin-top: 2rem;
+		padding: 0 2rem;
+
+		@include breakpointMobile(600px) {
+			padding: 0;
+		}
+	}
+
+	hr {
+		margin: 0 2rem;
+		background: $color-stone-150;
+		border: none;
+		height: 1px;
+
+		@include breakpointMobile(600px) {
+			margin: 0;
+		}
+	}
+}

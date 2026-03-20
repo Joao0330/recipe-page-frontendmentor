@@ -1,11 +1,15 @@
+@use '../abstracts' as *;
+
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	min-height: 100vh;
-	margin: 0 auto;
-	padding: 0 1rem;
-	/* border: 1px solid red; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $color-stone-100;
+
+	@include breakpointMobile(600px) {
+		padding: 8rem 3rem;
+	}
 }
 
 .img-fluid {
