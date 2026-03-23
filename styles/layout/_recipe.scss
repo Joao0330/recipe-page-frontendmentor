@@ -35,6 +35,10 @@
 		padding: 1.5rem 3.5rem;
 		margin: 2rem 0;
 
+		@include breakpointMobile(600px) {
+			padding: 1.5rem;
+		}
+
 		h2 {
 			font-family: 'Outfit', sans-serif;
 			font-size: 1.25rem;
@@ -48,18 +52,20 @@
 			flex-direction: column;
 			gap: 0.5rem;
 			color: $color-stone-600;
-			list-style: inside;
 
 			li {
-				position: relative;
+				display: flex;
+				gap: 0.5rem;
 				padding-left: 0.5rem;
 
-				&::marker {
+				&::before {
+					content: '•';
+					flex-shrink: 0;
 					color: $color-rose-800;
-					margin-right: 5rem;
+					font-size: 1.2rem;
 				}
 
-				strong {
+				div {
 					padding-left: 1rem;
 				}
 			}
@@ -73,6 +79,39 @@
 		@include breakpointMobile(600px) {
 			padding: 0;
 		}
+
+		h2 {
+			font-size: 1.75rem;
+			color: $color-brown-800;
+			margin-bottom: 1.5rem;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			padding: 0;
+			color: $color-stone-600;
+
+			li {
+				padding-left: 0.5rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+
+				&::before {
+					content: '•';
+					flex-shrink: 0;
+					color: $color-brown-800;
+					font-size: 1.2rem;
+				}
+
+				span {
+					margin-left: 1rem;
+					line-height: 1.5;
+				}
+			}
+		}
 	}
 
 	&__instructions {
@@ -82,14 +121,89 @@
 		@include breakpointMobile(600px) {
 			padding: 0;
 		}
+
+		h2 {
+			font-size: 1.75rem;
+			color: $color-brown-800;
+			margin-bottom: 1.5rem;
+		}
+
+		ol {
+			list-style: none;
+			counter-reset: step;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			padding: 0;
+			color: $color-stone-600;
+			line-height: 1.5;
+
+			li {
+				display: flex;
+				align-items: flex-start;
+				counter-increment: step;
+				padding-left: 0.5rem;
+
+				&::before {
+					content: counter(step) '.';
+					font-weight: bold;
+					color: $color-brown-800;
+					flex-shrink: 0;
+				}
+
+				div {
+					margin-left: 1rem;
+				}
+			}
+		}
 	}
 
 	&__nutrition {
-		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin: 2rem 0;
 		padding: 0 2rem;
 
 		@include breakpointMobile(600px) {
 			padding: 0;
+		}
+
+		h2 {
+			font-size: 1.75rem;
+			color: $color-brown-800;
+		}
+
+		p {
+			color: $color-stone-600;
+			line-height: 1.5;
+		}
+
+		table {
+			border-collapse: collapse;
+
+			tr {
+				border-bottom: 1px solid $color-stone-150;
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				td {
+					padding: 0.75rem 1.8rem;
+					font-size: 1rem;
+					line-height: 1.5;
+				}
+
+				.label {
+					color: $color-stone-600;
+				}
+
+				.value {
+					color: $color-brown-800;
+					font-weight: 700;
+				}
+			}
 		}
 	}
 

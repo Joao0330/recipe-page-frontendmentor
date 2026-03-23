@@ -18,6 +18,7 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Outfit', sans-serif;
+	background: $color-stone-100;
 }
 
 a {
@@ -25,9 +26,10 @@ a {
 	color: inherit;
 }
 
-/* ul {
-	list-style-type: none;
-} */
+ul {
+	list-style: none;
+	list-style-position: inside;
+}
 
 img {
 	display: block;

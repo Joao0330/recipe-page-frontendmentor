@@ -5,7 +5,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: $color-stone-100;
 
 	@include breakpointMobile(600px) {
 		padding: 8rem 3rem;
