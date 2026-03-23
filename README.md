@@ -21,7 +21,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/recipe-page-using-sass-css-d1kS2RHq3p)
 - Live Site URL: [Live site URL](https://joao0330.github.io/recipe-page-frontendmentor)
 
 ## My process
